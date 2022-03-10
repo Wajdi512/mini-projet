@@ -18,6 +18,7 @@ import com.epi.miniprojet.viewmodels.UserViewModel
 class MainActivity : AppCompatActivity() {
     lateinit var usersList: List<User>
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,6 +43,8 @@ class MainActivity : AppCompatActivity() {
                     prepareHomeImages(usersList.filter { user ->
                         user.userName.lowercase().contains(s.toString().lowercase())
                     })
+                } else {
+                    prepareHomeImages(usersList)
                 }
             }
         })
