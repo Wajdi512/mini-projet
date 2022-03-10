@@ -26,7 +26,7 @@ class UserViewModel : ViewModel() {
         return usersList
     }
 
-    fun loadUsers() {
+    private fun loadUsers() {
         val retIn =
             ApiInterface.RetrofitInstance.getRetrofitInstance().create(ApiInterface::class.java)
         retIn.getImages(clientId = "Y04er8NmAuQjzf6yjMg8-k3ILmdoZ-4gkB8wC0zQ9OQ", count = "20")

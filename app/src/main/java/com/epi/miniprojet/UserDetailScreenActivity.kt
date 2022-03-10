@@ -26,11 +26,9 @@ class UserDetailScreenActivity : AppCompatActivity() {
         val userNameTxt = findViewById<View>(R.id.verticalUserName) as TextView
         userNameTxt.text = user?.userName
         val createdAt = findViewById<View>(R.id.createdAt) as TextView
-        createdAt.text = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(user?.createdAt)
+        val s = "dd/MM/yyyy"
+        createdAt.text = SimpleDateFormat(s, Locale.getDefault()).format(user?.createdAt)
         val updatedAt = findViewById<View>(R.id.updatedAt) as TextView
-        updatedAt.text = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(user?.updatedAt)
-        val mainScreenIntent = Intent(this, UserDetailScreenActivity::class.java)
-
-
+        updatedAt.text = SimpleDateFormat(s, Locale.getDefault()).format(user?.updatedAt)
     }
 }

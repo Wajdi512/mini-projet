@@ -38,7 +38,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                prepareHomeImages(usersList.filter { user -> user.userName.contains(s) })
+                if (s != null && s.toString().trim().isNotEmpty()) {
+                    prepareHomeImages(usersList.filter { user ->
+                        user.userName.lowercase().contains(s.toString().lowercase())
+                    })
+                }
             }
         })
     }

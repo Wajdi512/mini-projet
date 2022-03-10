@@ -31,15 +31,16 @@ open class UserDetailAdapter(private val users: List<User>, private val context:
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val element = users[position]
         holder.userName.text = element.userName
+        val dateFormat = "dd/MM/yyyy"
         holder.createdAt.text = "Created At: ".plus(
-            SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(element.createdAt)
+            SimpleDateFormat(dateFormat, Locale.getDefault()).format(element.createdAt)
         )
         holder.updatedAt.text = "Updated At: ".plus(
-            SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(element.updatedAt)
+            SimpleDateFormat(dateFormat, Locale.getDefault()).format(element.updatedAt)
         )
         Glide.with(context).load(element.photo).into(holder.imageView)
         holder.imageView.setOnClickListener {
-            Toast.makeText(context, "You clicked on ImageView.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "You clicked on an image.", Toast.LENGTH_SHORT).show()
             val fullScreenIntent = Intent(context, FullImageScreenActivity::class.java)
             fullScreenIntent.data =
                 Uri.parse(element.photo)
