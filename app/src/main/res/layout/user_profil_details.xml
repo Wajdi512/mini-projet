@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/verticalImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:padding="2dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:paddingTop="50dp" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/verticalUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textFontWeight="1000"
+        android:textSize="80px" />
+
+    <TextView
+        android:id="@+id/createdAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#3F51B5"
+        android:textFontWeight="1000"
+        android:textSize="40px" />
+
+    <TextView
+        android:id="@+id/updatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#3F51B5"
+        android:textFontWeight="1000"
+        android:textSize="40px" />
+
+
+</LinearLayout>
